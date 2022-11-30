@@ -85,7 +85,7 @@ class Player (Context):
             if "jsonpickle" not in sys.modules:
                 announce ("jsonpickle hasn't be imported. Loading is impossible.")
             elif self.location != self.ship:
-                announce ("Loading is only possible abord ship.")
+                announce ("Loading is only possible aboard ship.")
             else:
                 with open ("save.json") as f:
                     s = f.read()    

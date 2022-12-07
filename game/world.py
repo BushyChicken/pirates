@@ -7,6 +7,7 @@ from game.context import Context
 from game.display import announce
 import game.config as config
 import game.combat as Combat
+from game.events import fish
 
 import random
 
@@ -55,13 +56,14 @@ class World (Context):
         self.locs[self.startx][self.starty+1] = testland
 
         self.events = []
-        self.events.append (lucky.LuckyDay())
-        self.events.append (nothing.Nothing())
-        self.events.append (seagull.Seagull())
-        self.events.append (seagull.Seagull())
-        self.events.append (seagull.Seagull())
-        self.events.append (sickness.Sickness())
-        self.events.append (drowned_pirates.DrownedPirates())
+#        self.events.append (lucky.LuckyDay())
+#        self.events.append (nothing.Nothing())
+#        self.events.append (seagull.Seagull())
+#        self.events.append (seagull.Seagull())
+#        self.events.append (seagull.Seagull())
+#        self.events.append (sickness.Sickness())
+#        self.events.append (drowned_pirates.DrownedPirates())
+        self.events.append (fish.Fish())
         self.nouns["world"] = self
 
     def get_day (self):

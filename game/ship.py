@@ -23,6 +23,10 @@ class Ship (Context):
         self.verbs['west'] = self
         self.verbs['give'] = self
 
+    def tfood(self, x):
+        if x == 1:
+            self.food = self.food + self.nfood
+
 
     def process_verb (self, verb, cmd_list, nouns):
         if (verb == "north"):
